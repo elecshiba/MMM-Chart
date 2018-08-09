@@ -91,6 +91,8 @@ Module.register("MMM-Chart", {
 
                 self.defaults.chartConfig.data.datasets[0].data = numberArray;
 
+                self.chart.data.datasets[0].data[2] = 50;
+
                 // self.updateDom();
                 self.chart.update();
             });        
