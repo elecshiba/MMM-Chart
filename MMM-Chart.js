@@ -119,8 +119,7 @@ Module.register("MMM-Chart", {
                 
                 // self.ad_img.src = "http://pgsaiyo.com/plant/shiga/images/shiga_vi.jpg";
 
-                self.addWrapper.innerHTML = '<video width="60%" height="auto" src="https://www.youtube.com/watch?v=wq1bZ-UP6oI"></video>';
-
+                self.addWrapper.innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/wq1bZ-UP6oI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
                 // self.updateDom();
                 self.chart.update();
             });        
