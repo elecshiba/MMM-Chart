@@ -10,7 +10,7 @@
 Module.register("MMM-Chart", {
     defaults: {
         width       : "600px",
-        height      : "400px",
+        height      : "200px",
         chartConfig : {
             type: 'bar',
             data: {
@@ -115,11 +115,12 @@ Module.register("MMM-Chart", {
         const chartEl  = document.createElement("canvas");
         chartEl.className += "pg";
         chartEl.id = "myChart"
-        const size = "600px";
-        chartEl.width  = size;
-        chartEl.height = size;
-        chartEl.style.width  = size;
-        chartEl.style.height = size;
+        const w = "600px";
+        const h = "200px";
+        chartEl.width  = w;
+        chartEl.height = h;
+        chartEl.style.width  = w;
+        chartEl.style.height = h;
 
         // Init chart.js
         this.chart = new Chart(chartEl.getContext("2d"), this.defaults.chartConfig);
