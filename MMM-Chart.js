@@ -39,8 +39,7 @@ Module.register("MMM-Chart", {
                     fontColor: "#FFF",
                     fontSize: 45,
                     padding: 40,
-                    position: "bottom",
-                    fontStyle: "light"
+                    position: "bottom"
                 },
                 defaults: {
                     barPercentage: 0.6,
