@@ -161,7 +161,7 @@ Module.register("MMM-Chart", {
         // this.ad_img = img;
 
         // addWrapper.innerHTML = '<img src="http://www.industrysourcing.com/sites/default/files/skii.jpg" width="60%" height="auto"></img>';
-        addWrapper.innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/wq1bZ-UP6oI?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
+        addWrapper.innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/wq1bZ-UP6oI?rel=0&amp;controls=0&amp;showinfo=0&vq=small" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
         this.addWrapper = addWrapper;
 
         // Append chart
