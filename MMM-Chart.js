@@ -73,10 +73,9 @@ Module.register("MMM-Chart", {
 
         function updateChartConfigDataset(number_array) {
             this.defaults.chartConfig.data.datasets[0].data = number_array;
-            this.updateDom();
         }
         
-
+        var self = this;
         fetch('https://jsonplaceholder.typicode.com/posts/42')
             .then(function(response) {
                 return response.json();
@@ -93,10 +92,8 @@ Module.register("MMM-Chart", {
                     numberArray.push(myJson["id"]);
                 }
 
-                updateChartConfigDataset(numberArray);
-                
-
-                return myJson;
+                self.defaults.chartConfig.data.datasets[0].data = number_array;
+                self.updateDom();
             });        
     },
 
