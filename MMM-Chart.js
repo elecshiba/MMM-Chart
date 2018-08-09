@@ -93,7 +93,7 @@ Module.register("MMM-Chart", {
                 var numberArray = [];
                 for (var i = 0; i < myJson.length; i+=1) {
                     // numberArray.push(Math.floor(Math.random() * (100)));
-                    const val = myJson[i]["status"] == 0 ? -1 : 1;
+                    const val = myJson[i]["status"] == 0 ? 0 : 1;
                     numberArray.push(val);
                 }
 
