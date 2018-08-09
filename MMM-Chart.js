@@ -97,9 +97,6 @@ Module.register("MMM-Chart", {
                 return response.json();
             })
             .then(function(myJson) {
-                console.log(myJson);
-                console.log(self.defaults.chartConfig)
-                console.log(self.updateDom)
 
                 // Fetch data from Spread sheet, and update the config.
                 var numberArray = [];
@@ -110,8 +107,6 @@ Module.register("MMM-Chart", {
                     numberArray.push(val);
                     labelArray.push(myJson[i]["product_name"]);
                 }
-
-                // self.defaults.chartConfig.data.datasets[0].data = numberArray;
 
                 self.chart.data.datasets[0].data = numberArray;
                 self.chart.data.labels = labelArray;
@@ -145,13 +140,17 @@ Module.register("MMM-Chart", {
 
         canvasWrapper.appendChild(chartEl);
 
-        
 
         // <img border="0" src="../images/img001.gif" width="128" height="128" alt="イラスト1">
         var img = document.createElement('img');
         img.src = 'http://www.industrysourcing.com/sites/default/files/skii.jpg';
-        img.style.width = '80%'
-        img.style.height = 'auto'
+        img.style.width = 'auto'
+        img.style.height = '20%'
+        img.style.setProperty("-webkit-transition", "all .3s ease-in-out");
+        img.style.setProperty("-moz-transition", "all .3s ease-in-out");
+        img.style.setProperty("transition", "all .3s ease-in-out");
+
+        this.ad_img = img;
 
         // Append chart
         wrapperEl.appendChild(canvasWrapper);
