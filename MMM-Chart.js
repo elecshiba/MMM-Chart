@@ -18,16 +18,12 @@ Module.register("MMM-Chart", {
                 datasets: [{
                     data: [0,0,0,0],
                     backgroundColor: [
-                        'rgba(255, 255, 255, 0.8)',
-                        'rgba(255, 255, 255, 0.8)',
-                        'rgba(255, 255, 255, 0.8)',
-                        'rgba(255, 255, 255, 0.8)',
-                        'rgba(255, 255, 255, 0.8)',
-                        'rgba(255, 255, 255, 0.8)'
+                        'rgba(255, 255, 255, 0.4)',
+                        'rgba(255, 255, 255, 0.4)',
+                        'rgba(255, 255, 255, 0.4)',
+                        'rgba(255, 255, 255, 0.4)'
                     ],
                     borderColor: [
-                        'rgba(255, 255, 255, 1.0)',
-                        'rgba(255, 255, 255, 1.0)',
                         'rgba(255, 255, 255, 1.0)',
                         'rgba(255, 255, 255, 1.0)',
                         'rgba(255, 255, 255, 1.0)',
@@ -68,7 +64,7 @@ Module.register("MMM-Chart", {
 		var self = this;
 		setInterval(function() {
             self.fetchData();
-        }, 2 * 1000);
+        }, 0.5 * 1000);
     },
     
     fetchData: function() {
