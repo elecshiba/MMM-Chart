@@ -9,8 +9,8 @@
 
 Module.register("MMM-Chart", {
     defaults: {
-        width       : "200px",
-        height      : "200px",
+        width       : "400px",
+        height      : "400px",
         chartConfig : {
             type: 'bar',
             data: {
@@ -102,10 +102,11 @@ Module.register("MMM-Chart", {
         const chartEl  = document.createElement("canvas");
         chartEl.className += "pg";
         chartEl.id = "myChart"
-        chartEl.width  = "200px";
-        chartEl.height = "200px";
-        chartEl.style.width  = "200px";
-        chartEl.style.height = "200px";
+        const size = "400px";
+        chartEl.width  = size;
+        chartEl.height = size;
+        chartEl.style.width  = size;
+        chartEl.style.height = size;
 
         // Init chart.js
         this.chart = new Chart(chartEl.getContext("2d"), this.defaults.chartConfig);
