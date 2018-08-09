@@ -146,8 +146,8 @@ Module.register("MMM-Chart", {
         // <img border="0" src="../images/img001.gif" width="128" height="128" alt="イラスト1">
         var img = document.createElement('img');
         img.src = 'http://www.industrysourcing.com/sites/default/files/skii.jpg';
-        img.style.width = 'auto'
-        img.style.height = '20%'
+        img.style.width = '60%'
+        img.style.height = 'auto'
         img.style.setProperty("-webkit-transition", "all .3s ease-in-out");
         img.style.setProperty("-moz-transition", "all .3s ease-in-out");
         img.style.setProperty("transition", "all .3s ease-in-out");
