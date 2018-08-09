@@ -70,10 +70,6 @@ Module.register("MMM-Chart", {
     },
     
     fetchData: function() {
-
-        function updateChartConfigDataset(number_array) {
-            this.defaults.chartConfig.data.datasets[0].data = number_array;
-        }
         
         var self = this;
         fetch('https://jsonplaceholder.typicode.com/posts/42')
@@ -82,8 +78,8 @@ Module.register("MMM-Chart", {
             })
             .then(function(myJson) {
                 console.log(myJson);
-                console.log(this.defaults.chartConfig)
-                console.log(updateChartConfigDataset)
+                console.log(self.defaults.chartConfig)
+                console.log(self.updateDom)
 
                 // Fetch data from Spread sheet, and update the config.
                 var numberArray = [];
