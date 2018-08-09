@@ -89,9 +89,9 @@ Module.register("MMM-Chart", {
                     numberArray.push(val);
                 }
 
-                self.defaults.chartConfig.data.datasets[0].data = numberArray;
+                // self.defaults.chartConfig.data.datasets[0].data = numberArray;
 
-                self.chart.data.datasets[0].data[2] = 50;
+                self.chart.data.datasets[0].data = numberArray;
 
                 // self.updateDom();
                 self.chart.update();
