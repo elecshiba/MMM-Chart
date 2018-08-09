@@ -14,7 +14,7 @@ Module.register("MMM-Chart", {
         chartConfig : {
             type: 'bar',
             data: {
-                labels: ["SK-II", "玉露茶", "コーヒー", "緑茶"],
+                labels: ["", "", "", ""],
                 datasets: [{
                     data: [0,0,0,0],
                     backgroundColor: [
@@ -95,15 +95,18 @@ Module.register("MMM-Chart", {
 
                 // Fetch data from Spread sheet, and update the config.
                 var numberArray = [];
+                var labelArray  = [];
                 for (var i = 0; i < myJson.length; i+=1) {
                     // numberArray.push(Math.floor(Math.random() * (100)));
                     const val = myJson[i]["status"] == 0 ? 0 : 1;
                     numberArray.push(val);
+                    labelArray.push(myJson[i]["product_name"]);
                 }
 
                 // self.defaults.chartConfig.data.datasets[0].data = numberArray;
 
                 self.chart.data.datasets[0].data = numberArray;
+                self.chart.data.labels = labelArray;
 
                 // self.updateDom();
                 self.chart.update();
@@ -131,21 +134,21 @@ Module.register("MMM-Chart", {
         // Append chart
         wrapperEl.appendChild(chartEl);
 
-        // Create chart canvas
-        const chartEl_count  = document.createElement("canvas");
-        chartEl_count.id = "chart_count"
-        const w = "600px";
-        const h = "300px";
-        chartEl_count.width  = w;
-        chartEl_count.height = h;
-        chartEl_count.style.width  = w;
-        chartEl_count.style.height = h;
+        // // Create chart canvas
+        // const chartEl_count  = document.createElement("canvas");
+        // chartEl_count.id = "chart_count"
+        // const w = "600px";
+        // const h = "300px";
+        // chartEl_count.width  = w;
+        // chartEl_count.height = h;
+        // chartEl_count.style.width  = w;
+        // chartEl_count.style.height = h;
 
-        // Init chart.js
-        this.chart_count = new Chart(chartEl_count.getContext("2d"), this.defaults.chartConfig);
+        // // Init chart.js
+        // this.chart_count = new Chart(chartEl_count.getContext("2d"), this.defaults.chartConfig);
 
-        // Append chart
-        wrapperEl.appendChild(chartEl_count);
+        // // Append chart
+        // wrapperEl.appendChild(chartEl_count);
 
 		return wrapperEl;
 	}
