@@ -39,8 +39,7 @@ Module.register("MMM-Chart", {
                     fontColor: "#FFF",
                     fontSize: 45,
                     padding: 40,
-                    position: "bottom",
-                    fontStyle: "light"
+                    position: "bottom"
                 },
                 defaults: {
                     barPercentage: 0.6,
@@ -116,6 +115,8 @@ Module.register("MMM-Chart", {
 
                 self.chart.data.datasets[0].data = numberArray;
                 self.chart.data.labels = labelArray;
+
+                self.chart.options.title.text = "運命を変えよう";
 
                 // self.updateDom();
                 self.chart.update();
