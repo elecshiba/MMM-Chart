@@ -76,7 +76,7 @@ Module.register("MMM-Chart", {
         for (var i = 0; i < 6; i+=1) {
             numberArray.push(Math.floor(Math.random() * (100)));
         }
-        this.defaults.chartConfig.datasets[0].data = numberArray;
+        this.defaults.chartConfig.data.datasets[0].data = numberArray;
     },
 
 	getDom: function() {
