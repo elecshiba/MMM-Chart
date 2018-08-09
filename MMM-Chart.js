@@ -73,14 +73,8 @@ Module.register("MMM-Chart", {
     fetchData: function() {
         
 
-        const fetchedData = fetch('https://jsonplaceholder.typicode.com/posts/42')
-            .then(function(response) {
-                return response.json();
-            })
-            .then(function(myJson) {
-                console.log(myJson);
-                return myJson;
-            });
+        const response = await fetch('https://jsonplaceholder.typicode.com/posts/42');
+        const fetchData = response.json(); 
 
         console.log(fetchedData);
 
