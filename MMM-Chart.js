@@ -128,6 +128,8 @@ Module.register("MMM-Chart", {
         const wrapperEl = document.createElement("div");
         // wrapperEl.setAttribute("style", "position: relative; display: block; width: 200; height: 200;");
 
+        const canvasWrapper = document.createElement("div");
+
         // Create chart canvas
         const chartEl  = document.createElement("canvas");
         chartEl.id = "chart1"
@@ -141,14 +143,16 @@ Module.register("MMM-Chart", {
         // Init chart.js
         this.chart = new Chart(chartEl.getContext("2d"), this.defaults.chartConfig);
 
+        canvasWrapper.appendChild(chartEl);
+
         
 
         var p = document.createElement('p');
-        p.innerHTML = '運命を変えよう';
+        p.innerHTML = 'テストテスト';
 
         // Append chart
-        chartEl.appendChild(p);
-        wrapperEl.appendChild(chartEl);
+        wrapperEl.appendChild(canvasWrapper);
+        wrapperEl.appendChild(p);
 
         // wrapperEl.appendChild(p);
 
