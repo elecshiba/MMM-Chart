@@ -71,6 +71,10 @@ Module.register("MMM-Chart", {
     },
     
     fetchData: function() {
+
+        function updateChartConfigDataset(number_array) {
+            this.defaults.chartConfig.data.datasets[0].data = number_array;
+        }
         
 
         const fetchedData = fetch('https://jsonplaceholder.typicode.com/posts/42')
@@ -80,6 +84,7 @@ Module.register("MMM-Chart", {
             .then(function(myJson) {
                 console.log(myJson);
                 console.log(this.defaults.chartConfig)
+                console.log(updateChartConfigDataset)
 
                 // Fetch data from Spread sheet, and update the config.
                 var numberArray = [];
@@ -87,7 +92,9 @@ Module.register("MMM-Chart", {
                     // numberArray.push(Math.floor(Math.random() * (100)));
                     numberArray.push(myJson["id"]);
                 }
-                this.defaults.chartConfig.data.datasets[0].data = numberArray;
+
+                updateChartConfigDataset(numberArray);
+                
 
                 return myJson;
             });        
