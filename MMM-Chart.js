@@ -41,7 +41,7 @@ Module.register("MMM-Chart", {
                         ticks: {
                             beginAtZero: false,
                             display: false,
-                            min: -1,
+                            min: 0,
                             max: 1,
                         }
                     }],
