@@ -67,7 +67,7 @@ Module.register("MMM-Chart", {
 		setInterval(function() {
             self.fetchData();
 			self.updateDom();
-		}, 1000);
+        }, 5 * 1000);
     },
     
     fetchData: function() {
