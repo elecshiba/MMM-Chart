@@ -113,7 +113,7 @@ Module.register("MMM-Chart", {
 
                 self.chart.options.title.text = "運命を変えよう";
 
-                for (opacity = 1.0; opacity > -0.1; opacity = opacity - 0.1) 
+                for (opacity = 1.0; opacity > -1.0; opacity = opacity - 0.1) 
                 {           
                     setTimeout(function(){self.ad_img.style.opacity = opacity;},100)                       
                 }  
