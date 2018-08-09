@@ -66,7 +66,6 @@ Module.register("MMM-Chart", {
 		var self = this;
 		setInterval(function() {
             self.fetchData();
-			self.updateDom();
         }, 8 * 1000);
     },
     
@@ -74,10 +73,11 @@ Module.register("MMM-Chart", {
 
         function updateChartConfigDataset(number_array) {
             this.defaults.chartConfig.data.datasets[0].data = number_array;
+            this.updateDom();
         }
         
 
-        const fetchedData = fetch('https://jsonplaceholder.typicode.com/posts/42')
+        fetch('https://jsonplaceholder.typicode.com/posts/42')
             .then(function(response) {
                 return response.json();
             })
