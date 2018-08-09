@@ -34,8 +34,8 @@ Module.register("MMM-Chart", {
         // wrapperEl.setAttribute("style", "position: relative; display: block; width: 200; height: 200;");
 
         const _config = {
-            width       : 200,
-            height      : 200,
+            width       : "200px",
+            height      : "200px",
             chartConfig : {
                 type: 'bar',
                 data: {
