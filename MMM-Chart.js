@@ -67,16 +67,30 @@ Module.register("MMM-Chart", {
 		setInterval(function() {
             self.fetchData();
 			self.updateDom();
-        }, 5 * 1000);
+        }, 8 * 1000);
     },
     
     fetchData: function() {
+        
+
+        const fetchedData = fetch('https://jsonplaceholder.typicode.com/posts/42')
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(myJson) {
+                console.log(myJson);
+                return null;
+            });
+
+
         // Fetch data from Spread sheet, and update the config.
         var numberArray = [];
         for (var i = 0; i < 6; i+=1) {
-            numberArray.push(Math.floor(Math.random() * (100)));
+            // numberArray.push(Math.floor(Math.random() * (100)));
+            numberArray.push(fetchedData["id"]);
         }
         this.defaults.chartConfig.data.datasets[0].data = numberArray;
+        
     },
 
 	getDom: function() {
