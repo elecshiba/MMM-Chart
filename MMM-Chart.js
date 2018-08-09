@@ -19,6 +19,15 @@ Module.register("MMM-Chart", {
 	},
 
 	start: function() {
+        this.config = Object.assign({}, this.defaults, this.config);
+		Log.info("Starting module: " + this.name);
+	},
+
+	getDom: function() {
+        // Create wrapper element
+        const wrapperEl = document.createElement("div");
+        wrapperEl.setAttribute("style", "position: relative; display: inline-block;");
+
         const _config = {
             width       : 200,
             height      : 200,
@@ -59,22 +68,14 @@ Module.register("MMM-Chart", {
                 }
             }
         }
-        this.config = Object.assign({}, this.defaults, _config);
-		Log.info("Starting module: " + this.name);
-	},
-
-	getDom: function() {
-        // Create wrapper element
-        const wrapperEl = document.createElement("div");
-        wrapperEl.setAttribute("style", "position: relative; display: inline-block;");
 
         // Create chart canvas
         const chartEl  = document.createElement("canvas");
-        chartEl.width  = this.config.width;
-        chartEl.height = this.config.height;
+        chartEl.width  = _config.width;
+        chartEl.height = _config.height;
 
         // Init chart.js
-        this.chart = new Chart(chartEl.getContext("2d"), this.config.chartConfig);
+        this.chart = new Chart(chartEl.getContext("2d"), _config.chartConfig);
 
         // Append chart
         wrapperEl.appendChild(chartEl);
