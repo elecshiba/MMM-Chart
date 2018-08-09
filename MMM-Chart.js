@@ -16,6 +16,11 @@ Module.register("MMM-Chart", {
 
     getScripts: function() {
 		return ["modules/" + this.name + "/node_modules/chart.js/dist/Chart.bundle.min.js"];
+    },
+    
+    // Define styles.
+	getStyles: function() {
+		return ["./mmm_chart.css"];
 	},
 
 	start: function() {
