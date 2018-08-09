@@ -26,7 +26,7 @@ Module.register("MMM-Chart", {
 	getDom: function() {
         // Create wrapper element
         const wrapperEl = document.createElement("div");
-        wrapperEl.setAttribute("style", "position: relative; display: inline-block;");
+        wrapperEl.setAttribute("style", "position: relative; display: inline-block; width: 200; height: 200;");
 
         const _config = {
             width       : 200,
@@ -73,6 +73,8 @@ Module.register("MMM-Chart", {
         const chartEl  = document.createElement("canvas");
         chartEl.width  = _config.width;
         chartEl.height = _config.height;
+        chartEl.style.width  = _config.width;
+        chartEl.style.height = _config.height;
 
         // Init chart.js
         this.chart = new Chart(chartEl.getContext("2d"), _config.chartConfig);
