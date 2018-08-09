@@ -117,7 +117,7 @@ Module.register("MMM-Chart", {
 
                 self.chart.options.title.text = chartTitle;
                 
-                self.ad_img.src = "http://pgsaiyo.com/plant/shiga/images/shiga_vi.jpg";
+                // self.ad_img.src = "http://pgsaiyo.com/plant/shiga/images/shiga_vi.jpg";
 
                 // self.updateDom();
                 self.chart.update();
@@ -148,19 +148,22 @@ Module.register("MMM-Chart", {
 
 
         // <img border="0" src="../images/img001.gif" width="128" height="128" alt="イラスト1">
-        var img = document.createElement('img');
-        img.src = 'http://www.industrysourcing.com/sites/default/files/skii.jpg';
-        img.style.width = '60%'
-        img.style.height = 'auto'
-        img.style.setProperty("-webkit-transition", "all .3s ease-in-out");
-        img.style.setProperty("-moz-transition", "all .3s ease-in-out");
-        img.style.setProperty("transition", "all .3s ease-in-out");
+        const addWrapper = document.createElement("div");
+        // var img = document.createElement('img');
+        // img.src = 'http://www.industrysourcing.com/sites/default/files/skii.jpg';
+        // img.style.width = '60%'
+        // img.style.height = 'auto'
+        // img.style.setProperty("-webkit-transition", "all .3s ease-in-out");
+        // img.style.setProperty("-moz-transition", "all .3s ease-in-out");
+        // img.style.setProperty("transition", "all .3s ease-in-out");
 
-        this.ad_img = img;
+        // this.ad_img = img;
+
+        addWrapper.innerHTML = '<img src="http://www.industrysourcing.com/sites/default/files/skii.jpg" width="60%" height="auto"></img>';
 
         // Append chart
         wrapperEl.appendChild(canvasWrapper);
-        wrapperEl.appendChild(img);
+        wrapperEl.appendChild(addWrapper);
 
         // wrapperEl.appendChild(p);
 
