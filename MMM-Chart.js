@@ -141,12 +141,16 @@ Module.register("MMM-Chart", {
         // Init chart.js
         this.chart = new Chart(chartEl.getContext("2d"), this.defaults.chartConfig);
 
-        // Append chart
-        wrapperEl.appendChild(chartEl);
+        
 
         var p = document.createElement('p');
         p.innerHTML = '運命を変えよう';
-        wrapperEl.appendChild(p);
+
+        // Append chart
+        chartEl.appendChild(p);
+        wrapperEl.appendChild(chartEl);
+
+        // wrapperEl.appendChild(p);
 
         // // Create chart canvas
         // const chartEl_count  = document.createElement("canvas");
