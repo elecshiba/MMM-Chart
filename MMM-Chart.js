@@ -147,12 +147,15 @@ Module.register("MMM-Chart", {
 
         
 
-        var p = document.createElement('p');
-        p.innerHTML = 'テストテスト';
+        // <img border="0" src="../images/img001.gif" width="128" height="128" alt="イラスト1">
+        var img = document.createElement('img');
+        img.src = 'http://www.industrysourcing.com/sites/default/files/skii.jpg';
+        img.style.width = '80%'
+        img.style.height = 'auto'
 
         // Append chart
         wrapperEl.appendChild(canvasWrapper);
-        wrapperEl.appendChild(p);
+        wrapperEl.appendChild(img);
 
         // wrapperEl.appendChild(p);
 
