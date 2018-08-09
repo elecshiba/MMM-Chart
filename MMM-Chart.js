@@ -14,10 +14,10 @@ Module.register("MMM-Chart", {
         chartConfig : {
             type: 'bar',
             data: {
-                labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+                labels: ["SK-II", "玉露茶", "コーヒー", "緑茶"],
                 datasets: [{
                     label: 'RFID',
-                    data: [12, 19, 3, 5, 2, 3],
+                    data: [12, 19, 3, 5],
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.2)',
                         'rgba(54, 162, 235, 0.2)',
@@ -83,14 +83,11 @@ Module.register("MMM-Chart", {
 
                 // Fetch data from Spread sheet, and update the config.
                 var numberArray = [];
-                var labelArray = [];
                 for (var i = 0; i < myJson.length; i+=1) {
                     // numberArray.push(Math.floor(Math.random() * (100)));
                     numberArray.push(myJson[i]["rssi"]);
-                    labelArray.push(myJson[i]["rfid"]);
                 }
 
-                self.defaults.chartConfig.data.labels = labelArray
                 self.defaults.chartConfig.data.datasets[0].data = numberArray;
 
                 self.updateDom();
