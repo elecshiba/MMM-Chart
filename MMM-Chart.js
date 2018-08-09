@@ -119,6 +119,8 @@ Module.register("MMM-Chart", {
                 
                 // self.ad_img.src = "http://pgsaiyo.com/plant/shiga/images/shiga_vi.jpg";
 
+                self.addWrapper.innerHTML = '<iframe width="60%" height="auto" src="https://www.youtube.com/watch?v=wq1bZ-UP6oI"></iframe>';
+
                 // self.updateDom();
                 self.chart.update();
             });        
@@ -160,6 +162,8 @@ Module.register("MMM-Chart", {
         // this.ad_img = img;
 
         addWrapper.innerHTML = '<img src="http://www.industrysourcing.com/sites/default/files/skii.jpg" width="60%" height="auto"></img>';
+
+        this.addWrapper = addWrapper;
 
         // Append chart
         wrapperEl.appendChild(canvasWrapper);
