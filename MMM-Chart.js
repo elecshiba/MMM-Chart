@@ -18,10 +18,10 @@ Module.register("MMM-Chart", {
                 datasets: [{
                     data: [0,0,0,0],
                     backgroundColor: [
-                        'rgba(255, 255, 255, 0.4)',
-                        'rgba(255, 255, 255, 0.4)',
-                        'rgba(255, 255, 255, 0.4)',
-                        'rgba(255, 255, 255, 0.4)'
+                        'rgba(255, 255, 255, 0.7)',
+                        'rgba(255, 255, 255, 0.7)',
+                        'rgba(255, 255, 255, 0.7)',
+                        'rgba(255, 255, 255, 0.7)'
                     ],
                     borderColor: [
                         'rgba(255, 255, 255, 1.0)',
@@ -40,6 +40,11 @@ Module.register("MMM-Chart", {
                             display: false,
                             min: -1,
                             max: 1,
+                        }
+                    }],
+                    xAxes: [{
+                        ticks: {
+                            fontSize: 30,
                         }
                     }]
                 }
