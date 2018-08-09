@@ -16,8 +16,7 @@ Module.register("MMM-Chart", {
             data: {
                 labels: ["SK-II", "玉露茶", "コーヒー", "緑茶"],
                 datasets: [{
-                    label: 'RFID',
-                    data: [12, 19, 3, 5],
+                    data: [0,0,0,0],
                     backgroundColor: [
                         'rgba(255, 255, 255, 0.8)',
                         'rgba(255, 255, 255, 0.8)',
@@ -34,15 +33,17 @@ Module.register("MMM-Chart", {
                         'rgba(255, 255, 255, 1.0)',
                         'rgba(255, 255, 255, 1.0)'
                     ],
-                    borderWidth: 5
+                    borderWidth: 1
                 }]
             },
             options: {
                 scales: {
                     yAxes: [{
                         ticks: {
-                            beginAtZero:true,
-                            display: false
+                            beginAtZero: false,
+                            display: false,
+                            min: -1,
+                            max: 1,
                         }
                     }]
                 }
@@ -67,7 +68,7 @@ Module.register("MMM-Chart", {
 		var self = this;
 		setInterval(function() {
             self.fetchData();
-        }, 8 * 1000);
+        }, 2 * 1000);
     },
     
     fetchData: function() {
