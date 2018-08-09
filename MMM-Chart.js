@@ -31,7 +31,7 @@ Module.register("MMM-Chart", {
 	getDom: function() {
         // Create wrapper element
         const wrapperEl = document.createElement("div");
-        wrapperEl.setAttribute("style", "position: relative; display: inline-block; width: 200; height: 200;");
+        wrapperEl.setAttribute("style", "position: relative; display: block; width: 200; height: 200;");
 
         const _config = {
             width       : 200,
