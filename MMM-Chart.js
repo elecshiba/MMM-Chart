@@ -131,21 +131,21 @@ Module.register("MMM-Chart", {
         // Append chart
         wrapperEl.appendChild(chartEl);
 
-        // // Create chart canvas
-        // const chartEl_count  = document.createElement("canvas");
-        // chartEl_count.id = "chart_count"
-        // const w = "600px";
-        // const h = "300px";
-        // chartEl_count.width  = w;
-        // chartEl_count.height = h;
-        // chartEl_count.style.width  = w;
-        // chartEl_count.style.height = h;
+        // Create chart canvas
+        const chartEl_count  = document.createElement("canvas");
+        chartEl_count.id = "chart_count"
+        const w = "600px";
+        const h = "300px";
+        chartEl_count.width  = w;
+        chartEl_count.height = h;
+        chartEl_count.style.width  = w;
+        chartEl_count.style.height = h;
 
-        // // Init chart.js
-        // this.chart_count = new Chart(chartEl_count.getContext("2d"), this.defaults.chartConfig);
+        // Init chart.js
+        this.chart_count = new Chart(chartEl_count.getContext("2d"), this.defaults.chartConfig);
 
-        // // Append chart
-        // wrapperEl.appendChild(chartEl_count);
+        // Append chart
+        wrapperEl.appendChild(chartEl_count);
 
 		return wrapperEl;
 	}
