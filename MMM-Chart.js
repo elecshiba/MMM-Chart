@@ -86,13 +86,13 @@ Module.register("MMM-Chart", {
                 var labelArray = [];
                 for (var i = 0; i < myJson.length; i+=1) {
                     // numberArray.push(Math.floor(Math.random() * (100)));
-                    numberArray(myJson[i]["rssi"]);
-                    labelArray(myJson[i]["rfid"]);
+                    numberArray.push(myJson[i]["rssi"]);
+                    labelArray.push(myJson[i]["rfid"]);
                 }
 
                 self.defaults.chartConfig.data.labels = labelArray
                 self.defaults.chartConfig.data.datasets[0].data = numberArray;
-                
+
                 self.updateDom();
             });        
     },
