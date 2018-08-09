@@ -76,6 +76,7 @@ Module.register("MMM-Chart", {
 
         // Create chart canvas
         const chartEl  = document.createElement("canvas");
+        chartEl.className += "pg";
         chartEl.width  = _config.width;
         chartEl.height = _config.height;
         chartEl.style.width  = _config.width;
