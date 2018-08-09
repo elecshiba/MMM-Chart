@@ -88,10 +88,10 @@ Module.register("MMM-Chart", {
         const chartEl  = document.createElement("canvas");
         chartEl.className += "pg";
         chartEl.id = "myChart"
-        chartEl.width  = _config.width;
-        chartEl.height = _config.height;
-        chartEl.style.width  = _config.width;
-        chartEl.style.height = _config.height;
+        chartEl.width  = "200px";
+        chartEl.height = "200px";
+        chartEl.style.width  = "200px";
+        chartEl.style.height = "200px";
 
         // Init chart.js
         this.chart = new Chart(chartEl.getContext("2d"), this.defaults.chartConfig);
