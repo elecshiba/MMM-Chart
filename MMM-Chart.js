@@ -10,7 +10,7 @@
 Module.register("MMM-Chart", {
     defaults: {
         width       : "600px",
-        height      : "200px",
+        height      : "300px",
         chartConfig : {
             type: 'bar',
             data: {
@@ -116,7 +116,7 @@ Module.register("MMM-Chart", {
         chartEl.className += "pg";
         chartEl.id = "myChart"
         const w = "600px";
-        const h = "200px";
+        const h = "300px";
         chartEl.width  = w;
         chartEl.height = h;
         chartEl.style.width  = w;
