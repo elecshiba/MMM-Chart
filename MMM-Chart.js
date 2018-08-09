@@ -101,9 +101,13 @@ Module.register("MMM-Chart", {
                 // Fetch data from Spread sheet, and update the config.
                 var numberArray = [];
                 var labelArray  = [];
+                var chartTitle  = "運命を変えよう";
                 for (var i = 0; i < myJson.length; i+=1) {
                     // numberArray.push(Math.floor(Math.random() * (100)));
                     const val = myJson[i]["status"] == 0 ? 1 : 0;
+                    if (myJson[i]["status"] == 0) {
+                        chartTitle= myJson[i]["ads"];
+                    }
                     numberArray.push(val);
                     labelArray.push(myJson[i]["product_name"]);
                 }
@@ -111,8 +115,8 @@ Module.register("MMM-Chart", {
                 self.chart.data.datasets[0].data = numberArray;
                 self.chart.data.labels = labelArray;
 
-                self.chart.options.title.text = "運命を変えよう";
-
+                self.chart.options.title.text = chartTitle;
+                
                 self.ad_img.src = "http://pgsaiyo.com/plant/shiga/images/shiga_vi.jpg";
 
                 // self.updateDom();
