@@ -132,6 +132,8 @@ Module.register("MMM-Chart", {
         // Append chart
         wrapperEl.appendChild(chartEl);
 
+        wrapperEl.appendChild(chartEl);
+
 		return wrapperEl;
 	}
 });
