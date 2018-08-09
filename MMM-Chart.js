@@ -144,6 +144,10 @@ Module.register("MMM-Chart", {
         // Append chart
         wrapperEl.appendChild(chartEl);
 
+        var p = document.createElement('p');
+        p.innerHTML = '運命を変えよう';
+        wrapperEl.appendChild(p);
+
         // // Create chart canvas
         // const chartEl_count  = document.createElement("canvas");
         // chartEl_count.id = "chart_count"
