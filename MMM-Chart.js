@@ -113,6 +113,8 @@ Module.register("MMM-Chart", {
 
                 self.chart.options.title.text = "運命を変えよう";
 
+                self.ad_img.src = "http://pgsaiyo.com/plant/shiga/images/shiga_vi.jpg";
+
                 // self.updateDom();
                 self.chart.update();
             });        
