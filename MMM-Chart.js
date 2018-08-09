@@ -16,7 +16,7 @@ Module.register("MMM-Chart", {
             data: {
                 labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
                 datasets: [{
-                    label: '# of Votes',
+                    label: 'RFID',
                     data: [12, 19, 3, 5, 2, 3],
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.2)',
@@ -72,7 +72,7 @@ Module.register("MMM-Chart", {
     fetchData: function() {
         
         var self = this;
-        fetch('https://jsonplaceholder.typicode.com/posts/42')
+        fetch('https://script.google.com/macros/s/AKfycbwAsbAMX3LiBGL3mKWacPCutAFmSu518nwftRt3Una1a9qDxNm7/exec?action=latest')
             .then(function(response) {
                 return response.json();
             })
@@ -83,12 +83,16 @@ Module.register("MMM-Chart", {
 
                 // Fetch data from Spread sheet, and update the config.
                 var numberArray = [];
-                for (var i = 0; i < 6; i+=1) {
+                var labelArray = [];
+                for (var i = 0; i < myJson.length; i+=1) {
                     // numberArray.push(Math.floor(Math.random() * (100)));
-                    numberArray.push(myJson["id"]);
+                    numberArray(myJson[i]["rssi"]);
+                    labelArray(myJson[i]["rfid"]);
                 }
 
+                self.defaults.chartConfig.data.labels = labelArray
                 self.defaults.chartConfig.data.datasets[0].data = numberArray;
+                
                 self.updateDom();
             });        
     },
