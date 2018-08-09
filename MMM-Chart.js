@@ -88,7 +88,7 @@ Module.register("MMM-Chart", {
                     numberArray.push(myJson["id"]);
                 }
 
-                self.defaults.chartConfig.data.datasets[0].data = number_array;
+                self.defaults.chartConfig.data.datasets[0].data = numberArray;
                 self.updateDom();
             });        
     },
