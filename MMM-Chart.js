@@ -33,6 +33,9 @@ Module.register("MMM-Chart", {
                 }]
             },
             options: {
+                legend: {
+                    display: false
+                },
                 scales: {
                     yAxes: [{
                         ticks: {
@@ -46,6 +49,7 @@ Module.register("MMM-Chart", {
                         ticks: {
                             fontSize: 25,
                             fontColor: '#FFF',
+                            fontFamily: "メイリオ, Meiryo, sans-serif"
                         }
                     }]
                 }
