@@ -39,7 +39,8 @@ Module.register("MMM-Chart", {
                     fontColor: "#FFF",
                     fontSize: 45,
                     padding: 40,
-                    position: "bottom"
+                    position: "bottom",
+                    fontStyle: "light"
                 },
                 defaults: {
                     barPercentage: 0.6,
@@ -106,7 +107,7 @@ Module.register("MMM-Chart", {
                 var labelArray  = [];
                 for (var i = 0; i < myJson.length; i+=1) {
                     // numberArray.push(Math.floor(Math.random() * (100)));
-                    const val = myJson[i]["status"] == 0 ? 0 : 1;
+                    const val = myJson[i]["status"] == 0 ? 1 : 0;
                     numberArray.push(val);
                     labelArray.push(myJson[i]["product_name"]);
                 }
