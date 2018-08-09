@@ -9,7 +9,7 @@
 
 Module.register("MMM-Chart", {
     defaults: {
-        width       : "400px",
+        width       : "600px",
         height      : "400px",
         chartConfig : {
             type: 'bar',
@@ -44,7 +44,8 @@ Module.register("MMM-Chart", {
                     }],
                     xAxes: [{
                         ticks: {
-                            fontSize: 30,
+                            fontSize: 25,
+                            fontColor: '#FFF',
                         }
                     }]
                 }
@@ -110,7 +111,7 @@ Module.register("MMM-Chart", {
         const chartEl  = document.createElement("canvas");
         chartEl.className += "pg";
         chartEl.id = "myChart"
-        const size = "400px";
+        const size = "600px";
         chartEl.width  = size;
         chartEl.height = size;
         chartEl.style.width  = size;
