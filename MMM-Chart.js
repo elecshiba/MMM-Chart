@@ -33,6 +33,15 @@ Module.register("MMM-Chart", {
                 }]
             },
             options: {
+                title: {
+                    display: true,
+                    text: 'Custom Chart Title',
+                    fontColor: "#FFF",
+                    fontSize: 45,
+                    padding: 40,
+                    position: "bottom",
+                    fontStyle: "light"
+                },
                 defaults: {
                     barPercentage: 0.6,
                     categoryPercentage: 0.6
