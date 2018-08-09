@@ -79,8 +79,10 @@ Module.register("MMM-Chart", {
             })
             .then(function(myJson) {
                 console.log(myJson);
-                return null;
+                return myJson;
             });
+
+        console.log(fetchedData);
 
 
         // Fetch data from Spread sheet, and update the config.
