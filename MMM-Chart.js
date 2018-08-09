@@ -33,6 +33,9 @@ Module.register("MMM-Chart", {
                 }]
             },
             options: {
+                defaults: {
+                    barPercentage: 0.6
+                },
                 legend: {
                     display: false
                 },
