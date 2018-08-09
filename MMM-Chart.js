@@ -85,7 +85,8 @@ Module.register("MMM-Chart", {
                 var numberArray = [];
                 for (var i = 0; i < myJson.length; i+=1) {
                     // numberArray.push(Math.floor(Math.random() * (100)));
-                    numberArray.push(myJson[i]["rssi"]);
+                    const val = yJson[i]["status"] == 0 ? -1 : 1;
+                    numberArray.push(val);
                 }
 
                 self.defaults.chartConfig.data.datasets[0].data = numberArray;
